@@ -59,7 +59,7 @@ exports.login = async (req, res) => {
                     }
                 });
             } else {
-                res.status(400).send({ message: 'no users with this email', });
+                res.status(200).send({ message: 'no users with this email', });
             }
         });
 
