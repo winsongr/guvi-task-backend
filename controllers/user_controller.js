@@ -1,7 +1,7 @@
 const userSchema = require("../model/usermodel");
 
 exports.getprofile = async (req, res) => {
-    userSchema.findById(req.body.id).then((val) => {
+    userSchema.findById(req.query.id).then((val) => {
         res.send(val)
     }).catch((err) => res.status(400).json(err));
 
