@@ -18,6 +18,7 @@ const userSchema = new mongoose.Schema({
     },
     mobile: {
         type: String,
+        min:10,
         max: 12,
     },
     date: {

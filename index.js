@@ -4,9 +4,9 @@ const routes = require('./routes/routes');
 const port = process.env.PORT || 4000;
 const app = express();
 const bodyParser = require("body-parser");
-
+const cors = require("cors")
 require('dotenv').config();
-
+app.use(cors())
 
 InitiateMongo();
 app.use(express.json());
